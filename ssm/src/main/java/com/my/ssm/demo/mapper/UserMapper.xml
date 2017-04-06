@@ -90,4 +90,8 @@
       address = #{address,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+   <select id="findUserByName" parameterType="String" resultMap="BaseResultMap">
+      SELECT * FROM USER WHERE username= #{name}
+   </select>
 </mapper>

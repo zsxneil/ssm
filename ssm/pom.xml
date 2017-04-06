@@ -12,6 +12,7 @@
         <!-- spring version -->
         <spring.version>4.2.5.RELEASE</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
+        <pagehelper.version>4.1.6</pagehelper.version>
     </properties>
 
     <dependencies>
@@ -126,6 +127,13 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>${mybatis.version}</version>
+        </dependency>
+        
+        <!--分页插件-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
         </dependency>
 
         <!-- cglib javassist -->

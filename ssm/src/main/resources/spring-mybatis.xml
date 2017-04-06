@@ -63,6 +63,20 @@
         <property name="mapperLocations" value="classpath:com/my/ssm/*/mapper/*.xml"/>
         <!-- 加载数据源 -->
         <property name="dataSource" ref="dataSource"/>
+        <property name="plugins">
+	        <array>
+	            <bean class="com.github.pagehelper.PageHelper">
+	                <!-- 这里的几个配置主要演示如何使用，如果不理解，一定要去掉下面的配置 -->
+	                <property name="properties">
+	                    <value>
+	                        helperDialect=mysql
+	                        reasonable=true
+	                        supportMethodsArguments=true
+	                    </value>
+	                </property>
+	            </bean>
+	        </array>
+	    </property>
     </bean>
 
     <!-- 通过MapperScannerConfigurer进行mapper扫描（建议使用）
@@ -73,6 +87,7 @@
         <!-- 指定扫描的包，如果存在多个包使用(逗号,)分割 -->
         <property name="basePackage" value="com.my.ssm.*.mapper" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	    
     </bean>
     
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
