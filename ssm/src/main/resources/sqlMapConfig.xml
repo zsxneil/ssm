@@ -5,12 +5,14 @@
 <configuration>
 
     <!-- 全局 setting 的配置，根据需要进行配置，如Lazy Loading、二级缓存等 -->
-
+	<settings>  
+        <setting name="logImpl" value="LOG4J"/>  
+    </settings>
     <!-- 别名的配置 -->
-    <typeAliases>
-        <!-- 批量扫描别名 -->
+    <!-- <typeAliases>
+        批量扫描别名
         <package name="com.my.ssm.*.model" />
-    </typeAliases>
+    </typeAliases> -->
 
     <!-- 配置 mapper
      由于使用的是在 spring 和 config.mybatis 的整合包中配置的批量扫描 mapper，
