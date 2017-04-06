@@ -4,7 +4,10 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     version="3.0">
     <display-name>SSM Web Application</display-name>
-    
+    <context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>ssm.root</param-value>
+	</context-param>
     <!-- Spring和mybatis的配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
