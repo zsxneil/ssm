@@ -188,6 +188,13 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+        
+        <!-- swagger -->
+		<dependency>
+		    <groupId>com.mangofactory</groupId>
+		    <artifactId>swagger-springmvc</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
 
         <!-- junit -->
         <dependency>

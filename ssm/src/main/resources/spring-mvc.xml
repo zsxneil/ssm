@@ -23,6 +23,8 @@
 	<mvc:annotation-driven/>
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
 	<context:component-scan base-package="com.my.ssm.*.controller" /> 
+	<bean class="com.my.ssm.demo.config.SwaggerConfig"></bean>
+	<bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig" />
 	<!-- 允许对静态资源文件的访问 -->  
   	<mvc:default-servlet-handler/>
   	<!-- 视图解析器 -->
@@ -36,6 +38,7 @@
         <property name="maxUploadSize" value="5242880"></property>  
         <property name="maxInMemorySize" value="40960"></property>  
    	</bean>  
+   	<mvc:resources mapping="/swagger/**" location="/WEB-INF/swagger/"/>
     <!-- 异常处理 -->
     <!-- <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
     	<property name="exceptionMappings">     
